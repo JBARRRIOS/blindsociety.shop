@@ -1,0 +1,127 @@
+/* ------------ ESTILOS GENERALES ----------*/
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Archivo', sans-serif;
+    color: whitesmoke;
+    background-image: url('../assets/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* ------------ ENCABEZADO ---------- */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    /* align-items: flex-start; */
+    padding: 10px;
+    width: 10%;
+
+}
+
+.header ul{
+    display: flex;
+    /* justify-content: flex-end; */
+    list-style-type: none;
+    padding: 10px;
+}
+
+.header a{
+    text-decoration: none;
+    padding: 0 10px;
+    color: whitesmoke;
+    font-size: 30px;
+}
+
+.header a:hover{
+    color: #815AA8;
+}
+
+
+/* --------- CONTENIDO INDEX ------- */
+
+.contenidoIndex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imagenIndex{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.remerasIndex{
+    width: 60%;
+}
+
+.titulosIndex{
+    margin-top: 300px;
+    display: flex;
+    /* justify-content: right; */
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.titulosIndex h1{
+    background-color: #815AA8;
+    font-size: 60px;
+    padding-right: 10%;
+}
+
+.titulosIndex h3{
+    margin-top: 1%;
+    font-size: 40px;
+}
+
+.titulosIndex button{
+    align-items: center;
+    background-color: #333333;
+    text-decoration: none;
+    padding: 15px 50px;
+    margin-left: 50px;
+    margin-top: 3%;
+    border-radius: 30px;
+}
+
+.boton{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.boton:hover{
+    opacity: .8;
+    color: #815AA8;
+}
+
+
+/* ----------- FOOTER ------------ */
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333;
+    padding: 50px;   
+}
+
+.footer p{
+    font-size: 20px;
+}
+
+.footer img{
+    width: 8%;
+}
+
