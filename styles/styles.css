@@ -20,27 +20,29 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    grid-area: header; 
 }
 
 .logo{
-    /* align-items: flex-start; */
-    padding: 10px;
-    width: 10%;
+    margin: 30px;
+    width: 20%;
+    grid-area: logo;
 
 }
 
 .header ul{
     display: flex;
-    /* justify-content: flex-end; */
+    justify-content: flex-end;
     list-style-type: none;
     padding: 10px;
+    grid-area: nav;
 }
 
 .header a{
     text-decoration: none;
     padding: 0 10px;
     color: whitesmoke;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .header a:hover{
@@ -53,36 +55,55 @@ body{
 .contenidoIndex{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    grid-area: contenido; 
 }
 
 .imagenIndex{
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     align-items: center;
+    grid-area: imagen;
+    width: 50%;
 }
 
 .remerasIndex{
-    width: 60%;
+    width: 100%;
+    grid-area: imagen;
 }
 
 .titulosIndex{
-    margin-top: 300px;
+    /* margin-top: 200px; */
+    width: 50%;
     display: flex;
-    /* justify-content: right; */
-    align-items: flex-end;
+    justify-content: flex-end;
+    align-items: center;
     flex-direction: column;
+    grid-area: titulos;
+    
 }
 
 .titulosIndex h1{
     background-color: #815AA8;
-    font-size: 60px;
+    font-size: 55px;
     padding-right: 10%;
+    align-self: flex-start;
 }
 
 .titulosIndex h3{
     margin-top: 1%;
     font-size: 40px;
+    justify-content: center;
+    align-self: flex-start;
+}
+
+
+.contenedorBotones{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* margin-right: 20px; */
+    align-self: flex-start;
+    justify-content: space-around;
 }
 
 .titulosIndex button{
@@ -91,8 +112,10 @@ body{
     text-decoration: none;
     padding: 15px 50px;
     margin-left: 50px;
+
     margin-top: 3%;
     border-radius: 30px;
+    
 }
 
 .boton{
@@ -108,13 +131,15 @@ body{
 
 
 /* ----------- FOOTER ------------ */
-
+.divFooter{
+    grid-area:footer; 
+}
 .footer{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: #333333;
-    padding: 50px;   
+    padding: 50px;
 }
 
 .footer p{
@@ -122,6 +147,1158 @@ body{
 }
 
 .footer img{
-    width: 8%;
+    width: 100%;
 }
 
+.footer a{
+    width: 2%;
+}
+
+/* ---------- GRIDS ESTRUCTURAS --------- */
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 5fr 0.1fr ;
+
+    grid-template-areas:
+    "header header header header"
+    "contenido contenido contenido contenido"
+    "footer footer footer footer";   
+}
+
+/* ------- MEDIA QUERIES------- */
+
+@media screen and (max-width:768px){
+    body{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.2fr 3fr 0.1fr;
+
+        grid-template-areas:
+        "logo nav"
+        "contenido contenido"
+        "footer footer";
+}
+
+.contenedorLogo{
+    width: 40%;
+        grid-area: logo;
+}
+
+.logo{
+    width: 40%;
+    margin: 20px;
+}
+
+.nav{
+    width: 60%;
+    
+}
+
+.header ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0%;
+    grid-area: nav;
+}
+
+.header a{
+    text-decoration: none;
+    /* padding: 0 10px; */
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+.contenidoIndex{
+    display: flex;
+    flex-direction: column;
+    grid-area: contenido; 
+}
+
+.imagenIndex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: imagen;
+    width: 100%;
+}
+
+.remerasIndex{
+    width: 100%;
+}
+
+.titulosIndex{
+    /* margin-top: 200px; */
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    grid-area: titulos;
+    
+}
+
+.titulosIndex h1{
+    background-color: #815AA8;
+    font-size: 55px;
+    padding-right: 15%;
+    align-self: flex-end;
+}
+
+.titulosIndex h3{
+    margin-top: 1%;
+    font-size: 40px;
+    justify-content: center;
+    align-self: center;
+}
+
+
+.contenedorBotones{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+
+.boton{
+    font-size: 20px;
+}
+
+.footer{
+    justify-content: space-evenly;
+    padding: 40px;
+}
+
+.footer p{
+    font-size: 15px;
+}
+
+.footer img{
+    width: 100%;
+}
+
+.footer a{
+    width: 6%;
+}
+
+}
+
+
+@media screen and (max-width: 480px){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr 1fr;
+        grid-template-areas:
+        "header"
+        "contenido"
+        "footer";
+    }
+
+.contenedorLogo{
+    width: 50%;
+        grid-area: logo;
+}
+
+.logo{
+    width: 60%;
+    margin: 10px;
+}
+
+.nav{
+    width: 60%;
+    
+}
+
+.header ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    padding: 0%;
+    grid-area: nav;
+}
+
+.header a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 14px;
+    align-self: stretch;
+}
+
+.contenidoIndex{
+    display: flex;
+    flex-direction: column;
+    grid-area: contenido; 
+}
+
+.imagenIndex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: imagen;
+    width: 100%;
+}
+
+.remerasIndex{
+    width: 100%;
+}
+
+
+.titulosIndex h1{
+    font-size: 30px;
+    padding-right: 15%;
+    align-self: flex-end;
+}
+
+.titulosIndex h3{
+    margin-top: 1%;
+    font-size: 20px;
+    justify-content: center;
+    align-self: center;
+}
+
+
+.contenedorBotones{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.titulosIndex button{
+    align-items: center;
+    background-color: #333333;
+    text-decoration: none;
+    padding: 10px 40px;
+    margin-left: 50px;
+    margin-top: 3%;
+    border-radius: 20px;
+    
+}
+
+.boton{
+    font-size: 10px;
+}
+
+.footer{
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+.footer p{
+    font-size: 10px;
+}
+
+.footer img{
+    width: 100%;
+}
+
+.footer a{
+    width: 6%;
+}
+
+}
+
+
+/* -------- NOSOTROS ------------ */
+.contenedorNosotros{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.2fr 5fr 5fr 5fr 0.1fr ;
+        grid-gap: 100px 0;
+        grid-template-areas:
+        "header header header header"
+        "nosotros nosotros nosotros nosotros"
+        "dgt dgt dgt dgt"
+        "telas telas telas telas"
+        "footer footer footer footer";
+}
+
+.contenidoNosotros{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+    grid-area: nosotros;
+    height: 100%;
+    padding-top: 1%;
+}
+
+.remerasNosotros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+}
+
+.remeraEjemplo{
+    margin-left: 10%;
+    width: 80%;
+    justify-content: center;
+}
+
+.tituloNosotros{ 
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tituloNosotros h1{
+    background-color: #815AA8;
+    font-size: 50px;
+    padding-right: 60%;
+    padding-left: 3%;
+    align-self: flex-start;
+
+}
+
+.tituloNosotros p{
+    margin-top: 1%;
+    font-size: 20px;
+    margin: 30px;
+    justify-content: center;
+    align-self: flex-end;
+    text-align: right;
+
+}
+
+.contenedorBotones{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 60%;
+    margin-right: 15%;
+}
+
+.tituloNosotros button{
+    text-align: center;
+    background-color: #333333;
+    text-decoration: none;
+    padding: 10px 60px;
+    margin-top: 3%;
+    border-radius: 20px;
+}
+
+.botonNosotros{
+    color: whitesmoke;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.botonNosotros:hover{
+    opacity: .8;
+    color: #815AA8;
+}
+
+.contenidoDGT{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    grid-area: dgt;
+    margin: 0%;
+}
+
+.sectionDGT{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: start; */
+    /* height: 10%; */
+    width: 50%;
+}
+
+.impresionDigital{
+    background-color: #815AA8;
+    /* display: inline; */
+    align-content: center;
+    justify-content: flex-start;
+    font-size: 35px;
+    margin-top: 0%;
+    padding: 5px 1% 5px 50%;
+    /* padding-left:50%;
+    padding-right: 1%; */
+}
+
+.sectionDGT p{
+    
+    font-size: 23px;
+    margin-top: 25%;
+    margin-left: 20px;
+    justify-content: center;
+    align-self: center;
+}
+
+.contImpresion{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 55%;
+}
+
+.muestraImpresion{
+    width: 100%;
+}
+
+
+
+.contenidoTelas{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    flex-direction: row-reverse;
+    grid-area: telas;
+}
+
+
+.sectionFotoTela{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.tela{
+    width: 90%;
+}
+
+.sectionTelas{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sectionTelas h2{
+    background-color: #815AA8;
+    font-weight: bolder;
+    font-size: 40px;
+    padding: 5px 50% 5px 3%;
+    /* padding-right:40%;
+    padding-left: 3%; */
+    align-self: flex-end;
+    text-align: left;
+
+}
+
+.sectionTelas p{
+    font-weight: lighter;
+    font-size: 30px;
+    margin: 20% 30px 0 0 ;
+    justify-content: center;
+    align-self: flex-end;
+    text-align: right;
+}
+
+
+
+/* ---------- MEDIA QUERIE NOSOTROS -----*/
+
+@media screen and (max-width:768px){
+    .contenedorNosotros{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.2fr 1fr 1fr 1fr 0.1fr;
+        grid-gap: 60px 0px;
+
+        grid-template-areas:
+        "header header"
+        "nosotros nosotros"
+        "dgt dgt"
+        "telas telas"
+        "footer footer";
+}
+
+.contenidoNosotros{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+    grid-area: nosotros;
+    height: 100%;
+    padding-top: 1%;
+}
+
+.remerasNosotros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.remeraEjemplo{
+    margin-left: 10%;
+    width: 80%;
+    justify-content: center;
+}
+
+.tituloNosotros{ 
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tituloNosotros h1{
+    background-color: #815AA8;
+    font-size: 30px;
+    padding-right: 60%;
+    padding-left: 3%;
+    align-self: flex-start;
+
+}
+
+.tituloNosotros p{
+    font-size: 15px;
+    margin: 50px 10px;
+    justify-content: center;
+    align-self: flex-end;
+    text-align: right;
+    white-space: nowrap;
+
+}
+
+.contenedorBotones{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 70%;
+    margin-right: 5%;
+}
+
+.tituloNosotros button{
+    text-align: center;
+    background-color: #333333;
+    text-decoration: none;
+    padding: 5px 30px;
+    margin-top: 3%;
+    border-radius: 20px;
+    
+}
+
+.botonNosotros{
+    color: whitesmoke;
+    text-decoration: none;
+    text-align: center;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.botonNosotros:hover{
+    opacity: .8;
+    color: #815AA8;
+}
+
+.contenidoDGT{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    grid-area: dgt;
+    margin: 0%;
+}
+
+.sectionDGT{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: start; */
+    /* height: 10%; */
+    width: 40%;
+}
+
+.impresionDigital{
+    background-color: #815AA8;
+    align-content: center;
+    justify-content: flex-start;
+    font-size: 20px;
+    margin-top: 0%;
+    padding: 5px 1% 5px 50%;
+    /* padding-left:50%;
+    padding-right: 1%; */
+}
+
+.sectionDGT p{
+    
+    font-size: 15px;
+    margin-top: 25%;
+    margin-left: 70px;
+    justify-content: center;
+    align-self: center;
+    white-space: nowrap;
+}
+
+.contImpresion{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 45%;
+}
+
+.muestraImpresion{
+    width: 100%;
+    margin-right: 5%;
+}
+
+
+
+.contenidoTelas{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    grid-area: telas;
+}
+
+
+.sectionFotoTela{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.tela{
+    width: 100%;
+    margin-right: 40%;
+}
+
+.sectionTelas{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sectionTelas h2{
+    background-color: #815AA8;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 5px 50% 5px 3%;
+    align-self: flex-end;
+    text-align: left;
+
+}
+
+.sectionTelas p{
+    font-weight: lighter;
+    font-size: 20px;
+    margin: 30% 20px 0 0 ;
+    justify-content: center;
+    align-self: flex-end;
+    text-align: right;
+    white-space: nowrap;
+}
+
+}
+
+
+@media screen and (max-width: 480px){
+    .contenedorNosotros{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 3fr 3fr 3fr 0.1fr;
+        grid-gap: 100px;
+        grid-template-areas:
+        "header"
+        "nosotros"
+        "dgt"
+        "telas"
+        "footer";
+    }
+
+    .contenidoNosotros{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        grid-area: nosotros;
+        height: 100%;
+        padding-top: 1%;
+    }
+    
+    .remerasNosotros{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .remeraEjemplo{
+        margin-left: 10%;
+        width: 90%;
+        justify-content: center;
+    }
+    
+    .tituloNosotros{ 
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items:center ;
+        flex-direction: column;
+    }
+    
+    .tituloNosotros h1{
+        background-color: #815AA8;
+        font-size: 20px;
+        padding: 5px 50% 5px 3%;
+        align-self: flex-end;
+    
+    }
+    
+    .tituloNosotros p{
+        font-size: 15px;
+        margin: 10px 10px 0;
+        justify-content: center;
+        align-self: flex-end;
+        text-align: right;
+        white-space: nowrap;
+    
+    }
+    
+    .contenedorBotones{
+        display: flex;
+        align-content: center;
+        justify-content: space-around;
+        width: 100%;
+        /* margin: 0%; */
+        margin: 40px 0 100px 0;
+        /* margin-right: 15%; */
+    }
+    
+    .tituloNosotros button{
+        text-align: center;
+        background-color: #333333;
+        text-decoration: none;
+        padding: 5px 30px;
+        /* margin: 2px 40px; */
+        border-radius: 20px;
+        
+    }
+    
+    .botonNosotros{
+        color: whitesmoke;
+        text-decoration: none;
+        text-align: center;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+    
+    .botonNosotros:hover{
+        opacity: .8;
+        color: #815AA8;
+    }
+    
+    .contenidoDGT{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        grid-area: dgt;
+        margin: 0%;
+    }
+    
+    .sectionDGT{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        /* text-align: start; */
+        /* height: 10%; */
+        width: 100%;
+    }
+    
+    .impresionDigital{
+        background-color: #815AA8;
+        align-content: flex-start;
+        justify-content: flex-start;
+        font-size: 20px;
+        white-space: nowrap;
+        margin-top: 0%;
+        padding: 5px 2% 5px 40%;
+        /* padding-left:50%;
+        padding-right: 1%; */
+    }
+    
+    .sectionDGT p{
+        
+        font-size: 15px;
+        margin: 0;
+        margin: 5% 0 5% 3%;
+        justify-content: flex-start;
+        align-self: flex-start;
+        white-space: nowrap;
+    }
+    
+    .contImpresion{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        width: 100%;
+    }
+    
+    .muestraImpresion{
+        width: 80%;
+        margin:0%;
+    }
+    
+    
+    
+    .contenidoTelas{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        grid-area: telas;
+    }
+    
+    
+    .sectionFotoTela{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .tela{
+        width: 70%;
+        margin: 0%;
+    }
+    
+    .sectionTelas{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .sectionTelas h2{
+        background-color: #815AA8;
+        font-weight: bolder;
+        font-size: 20px;
+        padding: 5px 50% 5px 3%;
+        align-self: flex-end;
+        text-align: left;
+    
+    }
+    
+    .sectionTelas p{
+        font-weight: lighter;
+        font-size: 15px;
+        margin: 3% 20px 50px 0 ;
+        justify-content: center;
+        align-self: flex-end;
+        text-align: right;
+        white-space: nowrap;
+    }
+}
+
+
+
+
+
+/* ------------ TIENDA -------------- */
+
+.contenedorTienda{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.2fr 2fr 2fr 0.1fr ;
+    grid-gap: 50px 0;
+    grid-template-areas:
+    "header header header"
+    "h1 h1 h1"
+    "tienda tienda tienda"
+    "tienda tienda tienda"
+    "footer footer footer";
+}
+
+.contenidoTienda{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-area: tienda;
+}
+
+.tituloTienda{
+    display: flex;
+    grid-area: h1;
+    justify-content: flex-end;
+    margin: 5% 0px;
+
+}
+
+.tituloTienda h1{
+    display: flex;
+    justify-content: flex-start;
+    background-color: #815AA8;
+    font-size: 50px;
+    padding: 1px 40% 1px 2%;
+    align-self: flex-end;
+    align-content: center;
+    
+}
+
+.contenidoTienda{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+}
+
+.divTienda{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 33%;
+    margin-bottom: 10%;
+}
+
+.divTienda img {
+    width: 100%;
+}
+
+.contenedorBotonTienda{
+    display: flex;
+    text-decoration: none;
+    width: 100%;
+    justify-content:center;
+}
+
+.botonTienda{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    background-color: #333333;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 10%;
+    border-radius: 20px;
+    font-size: 15px;
+    width: 50%;
+}
+
+.botonTienda:hover{
+    opacity: .8;
+    color: #815AA8;
+}
+
+
+
+
+
+
+/* ------ PERSONALIZA ------ */
+
+.contenedorPersonaliza{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.01fr 4fr 0.1fr ;
+    /* grid-gap: 30px 0; */
+    grid-template-areas:
+    "header header header header"
+    "contacto contacto titulo titulo"
+    "contacto contacto texto texto"
+    "footer footer footer footer";
+}
+
+.tituloPersonaliza{
+    display: flex;
+    grid-area: titulo;
+    justify-content: flex-end;
+    margin: 10% 0 0 0 ;
+
+}
+.tituloPersonaliza h1{
+    display: flex;
+    justify-content: flex-start;
+    background-color: #815AA8;
+    font-size: 50px;
+    padding: 1px 60% 1px 2%;
+    align-self: flex-end;
+    align-content: center;
+    
+}
+
+.contenidoPersonaliza{
+    display: flex ;
+    align-content: center;
+    justify-content: right;
+    grid-area: texto;
+    width: 80%;
+    margin-top: 10%;
+    white-space: nowrap;
+}
+
+.textoPersonaliza{
+    display:flex ;
+    justify-content: right;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding:0%;
+}
+
+.textoPersonaliza h2{
+    font-size: 30px;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.textoPersonaliza p{
+    font-size: 20px;
+    padding: 10px;
+}
+
+.textoPersonaliza ul {
+    padding: 10px 10px 10px 30px;
+    font-size: 20px;
+}
+
+.divContacto{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* align-self: center; */
+    justify-self: center;
+    padding-top: 60px;
+    margin: 50px;
+    background-color: #815aa88d;
+    width: 80%;
+    grid-area: contacto;
+}
+
+.contacto{
+    justify-content: center;
+    flex-direction: column;
+    padding: .8rem;
+    overflow: hidden;
+    color: gray;
+}
+
+.contacto label, .contacto input, .contacto textarea{
+    display: flex;
+    width: 100%;
+    margin-bottom: 8px;
+    align-content: center
+}
+
+.contacto label{
+    font-weight: 700;
+}
+
+.contacto input, .contacto textarea{
+    border: none;
+    border-bottom: 2px solid ;
+    margin-bottom: 10px;
+    font-size: 20px;
+    outline: none;
+    color: gray;
+}
+
+.contacto textarea{
+    min-height: 100px;
+}
+
+.formContacto{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 400px;
+    left: 50%;
+}
+
+
+.botonEnviar{
+    color: whitesmoke;
+    text-decoration: none;
+    /* text-align: center; */
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.botonEnviar:hover{
+    opacity: .8;
+    color: #815AA8;
+}
+
+
+/* ---------- FAQS -------- */
+
+.contenedorFAQS{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.01fr 4fr 0.1fr ;
+    /* grid-gap: 30px 0; */
+    grid-template-areas:
+    "header header header header"
+    "titulo titulo titulo titulo"
+    "imagen imagen faqs faqs"
+    "footer footer footer footer";
+}
+
+.tituloFAQS{
+    grid-area: titulo;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-content: center;
+    margin: 5% 0 0 0
+}
+
+.tituloFAQS h1{
+        display: flex;
+        justify-content: flex-start;
+        background-color: #815AA8;
+        font-size: 40px;
+        padding: 1px 40% 1px 1%;
+        align-self: flex-end;
+        /* align-content: center; */
+}
+
+.tituloFAQS h2{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1% 3% 0 0 ;
+}
+
+.imgFAQS{
+    grid-area: imagen;
+    width: 100%;
+}
+.imgFAQS img{
+    width: 80%;
+    height: auto;
+    padding-left: 10%;
+}
+
+.contenidoFAQS{
+    display: flex;
+    grid-area: faqs;
+    text-align: right;
+    padding-top: 15%;
+    padding-right: 5% ;
+    justify-content: flex-end;
+}
+
+.contenidoFAQS h2{
+    font-size: 24px;
+    padding-bottom: 5%
+}
+
+.contenidoFAQS p{
+    padding-bottom: 10%;
+}
