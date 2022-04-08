@@ -1083,7 +1083,6 @@ body{
     justify-content: center;
     align-self: center;
     background-color: #333333;
-    text-decoration: none;
     padding: 10px 20px;
     margin-top: 10%;
     border-radius: 20px;
@@ -1091,9 +1090,17 @@ body{
     width: 50%;
 }
 
+.botonTienda a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.botonTienda a:hover{
+    color: #815AA8;
+}
+
 .botonTienda:hover{
     opacity: .8;
-    color: #815AA8;
 }
 
 
@@ -1301,4 +1308,43 @@ body{
 
 .contenidoFAQS p{
     padding-bottom: 10%;
+}
+
+
+
+
+
+
+.header img{
+    transition: all 500ms ease;
+}
+
+.header img:hover{
+    transform: scale(1.1);
+}
+
+button{
+    transition: all 500ms ease;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+
+
+.footer img{
+    transition: all 500ms ease;
+}
+
+.footer img:hover{
+    transform: scale(1.5);
+}
+
+.imagenIndex{
+    transition: all 1000ms ease;
+}
+
+.imagenIndex:hover{
+    transform: scale(1.05);
 }
