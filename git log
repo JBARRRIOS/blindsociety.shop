@@ -1,0 +1,23 @@
+[33mcommit 771242af703a24498f69954477f02cff5fde1b15[m[33m ([m[1;36mHEAD -> [m[1;32mbootstrap[m[33m)[m
+Author: Ignacio Barrios <ignaciobarrios07@gmail.com>
+Date:   Wed Apr 13 01:52:53 2022 -0300
+
+    Implemente bootstrap
+
+[33mcommit 24e633b6672e94a31ba6e4542971f60b5e53f90d[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m, [m[1;32manimaciones[m[33m)[m
+Author: Ignacio Barrios <ignaciobarrios07@gmail.com>
+Date:   Fri Apr 8 19:42:27 2022 -0300
+
+    Añadi animaciones
+
+[33mcommit d33316b4484caa3def25893a8dfe4d126d7eca05[m
+Author: Ignacio Barrios <ignaciobarrios07@gmail.com>
+Date:   Mon Apr 4 21:18:55 2022 -0300
+
+    Incluyo flexbox y grids en Index y Nosotros
+
+[33mcommit ed8b509a28dab6b8cfdeeec7e754dcb08a65bdfb[m
+Author: Ignacio Barrios <ignaciobarrios07@gmail.com>
+Date:   Wed Mar 30 21:48:31 2022 -0300
+
+    Este es mi primer commit

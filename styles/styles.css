@@ -100,6 +100,7 @@ body{
 .titulosIndex h1{
     background-color: #815AA8;
     font-size: 55px;
+    font-weight: 700;
     padding-right: 10%;
     align-self: flex-start;
 }
@@ -892,7 +893,8 @@ body{
 }
 
 .muestraImpresion{
-    width: 100%;
+    width: 80%;
+    padding-right: 10%;
 }
 
 
@@ -1491,7 +1493,6 @@ body{
     .sectionTelas h2{
         background-color: #815AA8;
         font-weight: bolder;
-        margin: ;
         font-size: 20px;
         padding: 5px 50% 5px 3%;
         align-self: flex-end;
@@ -1513,7 +1514,7 @@ body{
 
 /* ------------ TIENDA -------------- */
 
-.contenedorTienda{
+/* .contenedorTienda{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.2fr 0.2fr 2fr 2fr 0.1fr ;
@@ -1524,7 +1525,7 @@ body{
     "tienda tienda tienda"
     "tienda tienda tienda"
     "footer footer footer";
-}
+} */
 
 .contenidoTienda{
     display: flex;
@@ -1538,15 +1539,16 @@ body{
     grid-area: h1;
     justify-content: flex-end;
     margin: 5% 0px;
+    padding: 0% ;
 
 }
 
 .tituloTienda h1{
     display: flex;
-    justify-content: flex-start;
+    justify-content: start;
     background-color: #815AA8;
     font-size: 50px;
-    padding: 1px 40% 1px 2%;
+    padding: 1px 10% 1px 2% ;
     align-self: flex-end;
     align-content: center;
     
@@ -1554,6 +1556,9 @@ body{
 
 .contenidoTienda{
     display: flex;
+    justify-self: center;
+    align-self: center;
+    margin: 0%;
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: flex-start;
@@ -1564,12 +1569,14 @@ body{
     justify-content: center;
     align-content: center;
     flex-direction: column;
+    
     width: 33%;
     margin-bottom: 10%;
 }
 
 .divTienda img {
     width: 100%;
+    border-radius: 10px;
 }
 
 .contenedorBotonTienda{
@@ -1605,24 +1612,267 @@ body{
     opacity: .8;
 }
 
+/* ------------------ MEDIA QUERIES TIENDA ----------------- */
+
+@media screen and (max-width: 1024px){
+    .tituloTienda{
+        display: flex;
+        grid-area: h1;
+        justify-content: flex-end;
+        margin: 5% 0px;
+        padding: 0% ;
+    
+    }
+    
+    .tituloTienda h1{
+        display: flex;
+        justify-content: start;
+        background-color: #815AA8;
+        font-size: 40px;
+        padding: 1px 10% 1px 2% ;
+        align-self: flex-end;
+        align-content: center;
+        
+    }
+    .contenedorBotonTienda{
+        display: flex;
+        text-decoration: none;
+        width: 100%;
+        justify-content:center;
+    }
+    
+    .botonTienda{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-self: center;
+        background-color: #333333;
+        padding: 5px 10px;
+        margin-top: 10%;
+        border-radius: 20px;
+        font-size: 15px;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:768px){
+    .tituloTienda{
+        display: flex;
+        grid-area: h1;
+        justify-content: flex-end;
+        margin: 5% 0px;
+        padding: 0% ;
+    
+    }
+    
+    .tituloTienda h1{
+        display: flex;
+        justify-content: start;
+        background-color: #815AA8;
+        font-size: 35px;
+        padding: 1px 10% 1px 2% ;
+        align-self: flex-end;
+        align-content: center;
+        
+    }
+    .contenedorBotonTienda{
+        display: flex;
+        text-decoration: none;
+        width: 100%;
+        justify-content:center;
+    }
+    
+    .botonTienda{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-self: center;
+        background-color: #333333;
+        padding: 10px 20px;
+        margin-top: 5%;
+        border-radius: 20px;
+        font-size: 10px;
+        width: 30%;
+    }
+    .contenidoTienda{
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        margin: 0%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: flex-start;
+    }
+    
+    .divTienda{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    
+    .divTienda img {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width:576px) and (min-width:480px) {
+    .nav{
+        margin-top: 0%;
+        margin-left: 0%;
+        width: 100%;
+        
+    }
+    
+    .header ul{
+        width: 100%;
+        align-self: center;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        grid-area: nav;
+    }
+    
+    .header a{
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: 14px;
+        padding: 0%;
+        align-self: stretch;
+    }
+    
+    .tituloTienda{
+        display: flex;
+        grid-area: h1;
+        justify-content: flex-end;
+        margin: 5% 0px;
+        padding: 0% ;
+    
+    }
+    
+    .tituloTienda h1{
+        display: flex;
+        justify-content: start;
+        background-color: #815AA8;
+        font-size: 20px;
+        width: 50%;
+        padding: 0% 0% 0% 10px;
+        align-self: flex-end;
+        align-content: center;
+        
+    }
+    .contenedorBotonTienda{
+        display: flex;
+        text-decoration: none;
+        width: 100%;
+        justify-content:center;
+    }
+    
+    .botonTienda{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-self: center;
+        background-color: #333333;
+        padding: 5px 10px;
+        margin-top: 10%;
+        border-radius: 20px;
+        font-size: 8px;
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:480px){
+    .nav{
+        margin-top: 0%;
+        margin-left: 0%;
+        width: 100%;
+        
+    }
+    
+    .header ul{
+        width: 100%;
+        align-self: center;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        grid-area: nav;
+    }
+    
+    .header a{
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: 14px;
+        padding: 0%;
+        align-self: stretch;
+    }
+    
+    .tituloTienda{
+        display: flex;
+        grid-area: h1;
+        justify-content: flex-end;
+        margin: 5% 0px;
+        padding: 0% ;
+    
+    }
+    
+    .tituloTienda h1{
+        display: flex;
+        justify-content: start;
+        background-color: #815AA8;
+        font-size: 20px;
+        width: 50%;
+        padding: 0% 0% 0% 10px;
+        align-self: flex-end;
+        align-content: center;
+        
+    }
+    .contenedorBotonTienda{
+        display: flex;
+        text-decoration: none;
+        width: 100%;
+        justify-content:center;
+    }
+    
+    .botonTienda{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-self: center;
+        background-color: #333333;
+        padding: 5px 10px;
+        margin-top: 10%;
+        border-radius: 20px;
+        font-size: 8px;
+        width: 30%;
+    }
+}
 
 
 
 
 
-/* ------ PERSONALIZA ------ */
 
-.contenedorPersonaliza{
+/* ------------------ PERSONALIZA ---------------- */
+
+/* .contenedorPersonaliza{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.2fr 0.01fr 4fr 0.1fr ;
-    /* grid-gap: 30px 0; */
     grid-template-areas:
     "header header header header"
     "contacto contacto titulo titulo"
     "contacto contacto texto texto"
     "footer footer footer footer";
-}
+} */
 
 .tituloPersonaliza{
     display: flex;
@@ -1636,7 +1886,7 @@ body{
     justify-content: flex-start;
     background-color: #815AA8;
     font-size: 50px;
-    padding: 1px 60% 1px 2%;
+    padding: 1px 40% 1px 2%;
     align-self: flex-end;
     align-content: center;
     
@@ -1644,20 +1894,20 @@ body{
 
 .contenidoPersonaliza{
     display: flex ;
+    flex-direction: row-reverse;
     align-content: center;
-    justify-content: right;
+    justify-content: space-around;
     grid-area: texto;
-    width: 80%;
-    margin-top: 10%;
+    width: 100%;
+    margin: 10% 0%;
     white-space: nowrap;
 }
 
 .textoPersonaliza{
     display:flex ;
-    justify-content: right;
     align-content: center;
     flex-direction: column;
-    width: 100%;
+    width: 40%;
     padding:0%;
 }
 
@@ -1682,11 +1932,11 @@ body{
     justify-content: center;
     align-content: center;
     /* align-self: center; */
-    justify-self: center;
-    padding-top: 60px;
-    margin: 50px;
+    padding: 60px 0%;
+    margin: 0%;
+    border-radius: 20px;
     background-color: #815aa88d;
-    width: 80%;
+    width: 40%;
     grid-area: contacto;
 }
 
@@ -1702,7 +1952,7 @@ body{
     display: flex;
     width: 100%;
     margin-bottom: 8px;
-    align-content: center
+    align-content: center;
 }
 
 .contacto label{
@@ -1732,11 +1982,17 @@ body{
 
 
 .botonEnviar{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    background-color: #333333;
+    padding: 10px 20px;
+    margin: 10% 0% 0% 25%;
+    border-radius: 20px;
+    font-size: 15px;
+    width: 50%;
     color: whitesmoke;
-    text-decoration: none;
-    /* text-align: center; */
-    font-size: 10px;
-    white-space: nowrap;
 }
 
 .botonEnviar:hover{
@@ -1744,20 +2000,600 @@ body{
     color: #815AA8;
 }
 
+/* ---------------- MEDIA QUERIES PERSONALIZA -------------- */
 
-/* ---------- FAQS -------- */
+@media screen and (max-width:1024px){
+    .tituloPersonaliza{
+        display: flex;
+        grid-area: titulo;
+        justify-content: flex-end;
+        margin: 10% 0 0 0 ;
+    
+    }
+    .tituloPersonaliza h1{
+        display: flex;
+        justify-content: flex-start;
+        background-color: #815AA8;
+        font-size: 40px;
+        padding: 1px 40% 1px 2%;
+        align-self: flex-end;
+        align-content: center;
+        
+    }
+    .contenidoPersonaliza{
+        display: flex ;
+        flex-direction: row-reverse;
+        align-content: center;
+        justify-content: space-around;
+        grid-area: texto;
+        width: 100%;
+        margin: 10% 0%;
+        white-space: nowrap;
+    }
+    
+    .textoPersonaliza{
+        display:flex ;
+        align-content: center;
+        flex-direction: column;
+        width: 30%;
+        padding:0%;
+        margin-right: 80px;
+    }
+    
+    .textoPersonaliza h2{
+        font-size: 25px;
+        white-space: nowrap;
+        padding: 10px;
+    }
+    
+    .textoPersonaliza p{
+        font-size: 15px;
+        padding: 10px;
+    }
+    
+    .textoPersonaliza ul {
+        padding: 10px 10px 10px 30px;
+        font-size: 15px;
+    }
+    .divContacto{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding: 60px 1%;
+        margin: 0%;
+        background-color: #815aa88d;
+        width: 40%;
+        grid-area: contacto;
+    }
+    
+    .contacto{
+        display: flex;
+        justify-items: center;
+        align-content: center;
+        flex-direction: column;
+        padding: .8rem;
+        overflow: hidden;
+        color: black;
+        font-size: 80%;
+    }
+    
+    .contacto label{
+        font-weight: 700;
+    }
 
-.contenedorFAQS{
+    .formContacto{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 400px;
+    }
+    
+    .botonEnviar{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-self: center;
+        background-color: #333333;
+        padding: 5px 10px;
+        margin: 0%;
+        margin-top: 10%;
+        border-radius: 10px;
+        font-size: 15px;
+        width: 50%;
+        color: whitesmoke;
+    }
+}
+
+@media screen and (max-width:768px){
+    .tituloPersonaliza{
+        display: flex;
+        grid-area: titulo;
+        justify-content: flex-end;
+        margin: 10% 0 0 0 ;
+    
+    }
+    .tituloPersonaliza h1{
+        display: flex;
+        justify-content: flex-start;
+        background-color: #815AA8;
+        font-size: 30px;
+        padding: 1px 70% 1px 2%;
+        align-self: flex-end;
+        align-content: center;
+        
+    }
+    .contenidoPersonaliza{
+        display: flex ;
+        /* flex-direction: column; */
+        align-content: center;
+        grid-area: texto;
+        width: 100%;
+        margin: 10% 0%;
+        white-space: nowrap;
+    }
+    
+    .textoPersonaliza{
+        display:flex ;
+        justify-content: right;
+        align-content: center;
+        flex-direction: column;
+        width: 50%;
+        padding:0%;
+        margin: 0%;
+        margin-bottom: 5%;
+    }
+    
+    .textoPersonaliza h2{
+        font-size: 25px;
+        white-space: nowrap;
+        padding: 10px;
+    }
+    
+    .textoPersonaliza p{
+        font-size: 15px;
+        padding: 10px;
+    }
+    
+    .textoPersonaliza ul {
+        padding: 10px 10px 10px 30px;
+        font-size: 15px;
+    }
+    .divContacto{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding: 60px 1%;
+        margin: 0%;
+        background-color: #815aa88d;
+        width: 80%;
+        grid-area: contacto;
+    }
+    
+    .contacto{
+        display: flex;
+        justify-items: center;
+        align-content: center;
+        flex-direction: column;
+        padding: .8rem;
+        overflow: hidden;
+        color: black;
+        font-size: 80%;
+    }
+    
+    .contacto label{
+        font-weight: 700;
+    }
+
+    .formContacto{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 400px;
+    }
+    
+    .botonEnviar{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-self: center;
+        background-color: #333333;
+        padding: 5px 10px;
+        margin-top: 10%;
+        border-radius: 10px;
+        font-size: 15px;
+        width: 50%;
+        color: whitesmoke;
+    }
+    
+}
+
+@media (max-width:576px) and (min-width:480px){
+    .tituloPersonaliza{
+        display: flex;
+        grid-area: titulo;
+        justify-content: flex-end;
+        margin: 10% 0 0 0 ;
+    
+    }
+    .tituloPersonaliza h1{
+        display: flex;
+        justify-content: flex-start;
+        background-color: #815AA8;
+        font-size: 30px;
+        width: 55%;
+        padding: 0%;
+        align-self: flex-end;
+        align-content: center;
+        
+    }
+    .contenidoPersonaliza{
+        display: flex ;
+        /* flex-direction: column; */
+        align-content: center;
+        grid-area: texto;
+        width: 100%;
+        margin: 10% 0%;
+        white-space: nowrap;
+    }
+    
+    .textoPersonaliza{
+        display:flex ;
+        justify-content: right;
+        align-content: center;
+        flex-direction: column;
+        width: 70%;
+        padding:0%;
+        margin: 0%;
+        margin-bottom: 5%;
+    }
+}
+
+@media screen and (max-width:480px){
+    .tituloPersonaliza{
+        display: flex;
+        grid-area: titulo;
+        justify-content: flex-end;
+        margin: 10% 0 0 0 ;
+        width: 100%;
+    
+    }
+    .tituloPersonaliza h1{
+        display: flex;
+        justify-content: flex-start;
+        background-color: #815AA8;
+        font-size: 25px;
+        width: 10%;
+        padding: 1px 70% 1px 2%;
+        align-self: flex-end;
+        align-content: center;
+        
+    }
+    .contenidoPersonaliza{
+        display: flex ;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-content: center;
+        grid-area: texto;
+        width: 100%;
+        margin: 10% 0%;
+        white-space: nowrap;
+    }
+    
+    .textoPersonaliza{
+        display:flex ;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        width: 100%;
+        padding:0% 0% 0% 10%;
+        margin: 0%;
+        margin-bottom: 5%;
+    }
+    
+    .textoPersonaliza h2{
+        font-size: 20px;
+        white-space: nowrap;
+        padding: 10px;
+    }
+    
+    .textoPersonaliza p{
+        font-size: 14px;
+        padding: 0% 0% 0% 10px;
+    }
+    
+    .textoPersonaliza ul {
+        padding: 10px 10px 10px 30px;
+        font-size: 14px;
+    }
+    .divContacto{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding: 60px 1%;
+        margin: 0%;
+        background-color: #815aa88d;
+        width: 70%;
+        grid-area: contacto;
+    }
+    
+    .contacto{
+        display: flex;
+        justify-items: center;
+        align-content: center;
+        flex-direction: column;
+        padding: .8rem;
+        overflow: hidden;
+        color: black;
+        font-size: 80%;
+    }
+    
+    .contacto label{
+        font-weight: 700;
+    }
+
+    .formContacto{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 400px;
+    }
+    
+    .botonEnviar{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-self: center;
+        background-color: #333333;
+        padding: 5px 10px;
+        margin-top: 10%;
+        border-radius: 10px;
+        font-size: 10px;
+        width: 40%;
+        color: whitesmoke;
+    }
+}
+
+@media screen and (max-width:425px){
+    .tituloPersonaliza{
+        display: flex;
+        grid-area: titulo;
+        justify-content: flex-end;
+        margin: 10% 0 0 0 ;
+        width: 100%;
+    
+    }
+    .tituloPersonaliza h1{
+        display: flex;
+        justify-content: flex-start;
+        background-color: #815AA8;
+        font-size: 20px;
+        width: 10%;
+        padding: 1px 70% 1px 2%;
+        align-self: flex-end;
+        align-content: center;
+        
+    }
+    .contenidoPersonaliza{
+        display: flex ;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-content: center;
+        grid-area: texto;
+        width: 100%;
+        margin: 10% 0%;
+        white-space: nowrap;
+    }
+    
+    .textoPersonaliza{
+        display:flex ;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        width: 70%;
+        padding:0% 0% 0% 0%;
+        margin: 0%;
+        margin-bottom: 5%;
+    }
+    
+    .textoPersonaliza h2{
+        font-size: 15px;
+        white-space: nowrap;
+        padding: 10px 0%;
+    }
+    
+    .textoPersonaliza p{
+        font-size: 12px;
+        padding: 0% 0% 0% 0px;
+    }
+    
+    .textoPersonaliza ul {
+        padding: 10px;
+        font-size: 12px;
+    }
+    .divContacto{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding: 10px 0%;
+        margin: 0%;
+        background-color: #815aa88d;
+        width: 70%;
+        grid-area: contacto;
+    }
+    
+    .contacto{
+        display: flex;
+        justify-items: center;
+        align-content: center;
+        flex-direction: column;
+        padding: .8rem;
+        overflow: hidden;
+        color: black;
+        font-size: 80%;
+    }
+    
+    .contacto label{
+        font-weight: 700;
+    }
+
+    .formContacto{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 400px;
+    }
+    
+    .botonEnviar{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-self: center;
+        background-color: #333333;
+        padding: 5px 10px;
+        margin-top: 10%;
+        border-radius: 10px;
+        font-size: 10px;
+        width: 40%;
+        color: whitesmoke;
+    }
+}
+
+@media screen and (max-width:375px){
+    .tituloPersonaliza{
+        display: flex;
+        grid-area: titulo;
+        justify-content: flex-end;
+        margin: 10% 0 0 0 ;
+        width: 100%;
+    
+    }
+    .tituloPersonaliza h1{
+        display: flex;
+        justify-content: flex-start;
+        background-color: #815AA8;
+        font-size: 20px;
+        width: 10%;
+        padding: 1px 70% 1px 2%;
+        align-self: flex-end;
+        align-content: center;
+        
+    }
+    .contenidoPersonaliza{
+        display: flex ;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-content: center;
+        grid-area: texto;
+        width: 100%;
+        margin: 10% 0%;
+        white-space: nowrap;
+    }
+    
+    .textoPersonaliza{
+        display:flex ;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        width: 80%;
+        padding:0% 0% 0% 0%;
+        margin: 0%;
+        margin-bottom: 5%;
+    }
+    .divContacto{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding: 10px 0%;
+        margin: 0%;
+        background-color: #815aa88d;
+        width: 80%;
+        grid-area: contacto;
+    }
+}
+
+@media screen and (max-width:320px){
+    .tituloPersonaliza{
+        display: flex;
+        grid-area: titulo;
+        justify-content: flex-end;
+        margin: 10% 0 0 0 ;
+        width: 100%;
+    
+    }
+    .tituloPersonaliza h1{
+        display: flex;
+        justify-content: flex-start;
+        background-color: #815AA8;
+        font-size: 20px;
+        width: 10%;
+        padding: 1px 70% 1px 2%;
+        align-self: flex-end;
+        align-content: center;
+        
+    }
+    .contenidoPersonaliza{
+        display: flex ;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-content: center;
+        grid-area: texto;
+        width: 100%;
+        margin: 10% 0%;
+        white-space: nowrap;
+    }
+    
+    .textoPersonaliza{
+        display:flex ;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        width: 100%;
+        padding:0% 0% 0% 10%;
+        margin: 0%;
+        margin-bottom: 5%;
+    }
+
+    .textoPersonaliza h2{
+        font-size: 13px;
+        white-space: nowrap;
+        padding: 10px 0%;
+    }
+    
+    .textoPersonaliza p{
+        font-size: 10px;
+        padding: 0% 0% 0% 0px;
+    }
+    
+    .textoPersonaliza ul {
+        padding: 10px;
+        font-size: 10px;
+    }
+    .divContacto{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding: 10px 0%;
+        border-radius: 10px;
+        margin: 0%;
+        background-color: #815aa88d;
+        width: 80%;
+        height: auto;
+        grid-area: contacto;
+    }
+}
+
+/* -------------------------- FAQS ----------------------- */
+
+/* .contenedorFAQS{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.2fr 0.01fr 4fr 0.1fr ;
-    /* grid-gap: 30px 0; */
     grid-template-areas:
     "header header header header"
     "titulo titulo titulo titulo"
     "imagen imagen faqs faqs"
     "footer footer footer footer";
-}
+} */
 
 .tituloFAQS{
     grid-area: titulo;
@@ -1765,31 +2601,40 @@ body{
     justify-content: flex-end;
     flex-direction: column;
     align-content: center;
-    margin: 5% 0 0 0
+    width: 100%;
+    margin: 5% 0 0 0;
 }
 
 .tituloFAQS h1{
         display: flex;
         justify-content: flex-start;
         background-color: #815AA8;
+        width: 50%;
+        font-weight: bold;
         font-size: 40px;
-        padding: 1px 40% 1px 1%;
+        padding: 0%;
+        padding-left: 10px;
         align-self: flex-end;
-        /* align-content: center; */
 }
 
 .tituloFAQS h2{
     display: flex;
     justify-content: flex-end;
-    padding: 1% 3% 0 0 ;
+    padding: 1% 4% 0 0 ;
 }
+.FAQS{
+    display: flex;
+    justify-content: space-between;
+    margin: 0%;
+    margin-bottom: 10%;
 
+}
 .imgFAQS{
     grid-area: imagen;
-    width: 100%;
+    width: 50%;
 }
 .imgFAQS img{
-    width: 80%;
+    width: 90%;
     height: auto;
     padding-left: 10%;
 }
@@ -1798,9 +2643,11 @@ body{
     display: flex;
     grid-area: faqs;
     text-align: right;
-    padding-top: 15%;
-    padding-right: 5% ;
+    margin: 0%;
+    padding-top: 10%;
+    padding-right: 4% ;
     justify-content: flex-end;
+    white-space: nowrap;
 }
 
 .contenidoFAQS h2{
@@ -1812,9 +2659,281 @@ body{
     padding-bottom: 10%;
 }
 
+/* -------------------- MEDIA QUERIES FAQS -------------------- */
+
+@media screen and (max-width:1024px){
+    .tituloFAQS h1{
+            display: flex;
+            justify-content: flex-start;
+            background-color: #815AA8;
+            width: 50%;
+            font-weight: bold;
+            font-size: 30px;
+            padding: 0%;
+            padding-left: 10px;
+            align-self: flex-end;
+    }
+    
+    .tituloFAQS h2{
+        display: flex;
+        font-size: 25px;
+        justify-content: flex-end;
+        padding: 1% 4% 0 0 ;
+    }
+    .contenidoFAQS h2{
+        font-size: 20px;
+        padding-bottom: 5%
+    }
+    
+    .contenidoFAQS p{
+        font-size: 15px;
+        padding-bottom: 10%;
+    }
+}
+
+
+@media screen and (max-width:768px){
+    .tituloFAQS{
+        grid-area: titulo;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        margin: 5% 0 0 0;
+    }
+    
+    .tituloFAQS h1{
+        display: flex;
+        justify-content: flex-start;
+        background-color: #815AA8;
+        width: 50%;
+        font-weight: bold;
+        font-size: 40px;
+        padding: 0%;
+        padding-left: 10px;
+        align-self: flex-end;
+    }
+    
+    .tituloFAQS h2{
+        display: flex;
+        justify-content: flex-end;
+        padding: 1% 4% 0 0 ;
+    }
+    .FAQS{
+        display: flex;
+        justify-content: space-between;
+        margin: 0%;
+        margin-bottom: 10%;
+    
+    }
+    .imgFAQS{
+        grid-area: imagen;
+        width: 100%;
+        justify-content: right;
+    }
+    .imgFAQS img{
+        width: 100%;
+        height: auto;
+        padding-left: 50%;
+    }
+    
+    .contenidoFAQS{
+        display: flex;
+        grid-area: faqs;
+        width: 100%;
+        text-align: right;
+        margin: 0%;
+        padding-top: 5%;
+        padding-right: 4% ;
+        justify-content: flex-end;
+        white-space: nowrap;
+    }
+    
+    .contenidoFAQS h2{
+        font-size: 24px;
+        padding-bottom: 5%
+    }
+    
+    .contenidoFAQS p{
+        padding-bottom: 10%;
+    }
+}
+
+@media screen and (max-width:425px){
+    .tituloFAQS{
+        grid-area: titulo;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        margin: 5% 0 0 0;
+    }
+    
+    .tituloFAQS h1{
+        display: flex;
+        justify-content: flex-start;
+        background-color: #815AA8;
+        width: 70%;
+        font-weight: bold;
+        font-size: 25px;
+        padding: 0%;
+        padding-left: 10px;
+        align-self: flex-end;
+    }
+    
+    .tituloFAQS h2{
+        display: flex;
+        font-size: 20px;
+        justify-content: flex-end;
+        padding: 1% 4% 0 0 ;
+    }
+    .FAQS{
+        display: flex;
+        align-content: center;
+        margin: 0%;
+        margin-bottom: 10%;
+    
+    }
+    .imgFAQS{
+        grid-area: imagen;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+    .imgFAQS img{
+        width: 100%;
+        height: auto;
+        /* padding: 0%; */
+        padding-left: 45%;
+    }
+    
+    .contenidoFAQS{
+        display: flex;
+        grid-area: faqs;
+        width: 100%;
+        text-align: right;
+        margin: 0%;
+        padding-top: 5%;
+        padding-right: 4% ;
+        justify-content: flex-end;
+        white-space: nowrap;
+    }
+    
+    .contenidoFAQS h2{
+        font-size: 17px;
+        padding-bottom: 5%
+    }
+    
+    .contenidoFAQS p{
+        font-size: 12px;
+        padding-bottom: 10%;
+    }
+}
+
+@media screen and (max-width:375px){
+    .contenidoFAQS{
+        display: flex;
+        grid-area: faqs;
+        width: 100%;
+        text-align: right;
+        margin: 0%;
+        padding: 0%;
+        padding-top: 5%;
+        padding-right: 2% ;
+        justify-content: flex-end;
+        white-space: nowrap;
+    }
+    
+    .contenidoFAQS h2{
+        font-size: 15px;
+        padding-bottom: 5%
+    }
+    
+    .contenidoFAQS p{
+        font-size: 12px;
+        padding-bottom: 10%;
+    }
+    
+}
+
+@media screen and (max-width:320px){
+    .header ul{
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin-top: 10px;
+        padding: 10px;
+        grid-area: nav;
+    }
+
+    .header a{
+        display: flex;
+        text-decoration: none;
+        padding: 0 10px;
+        color: whitesmoke;
+        font-size: 12px;
+    }
+
+    .tituloFAQS{
+        grid-area: titulo;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        margin: 5% 0 0 0;
+    }
+    
+    .tituloFAQS h1{
+        display: flex;
+        justify-content: flex-start;
+        background-color: #815AA8;
+        width: 70%;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 0%;
+        padding-left: 10px;
+        align-self: flex-end;
+    }
+    
+    .tituloFAQS h2{
+        display: flex;
+        font-size: 15px;
+        justify-content: flex-end;
+        padding: 1% 4% 0 0 ;
+    }
+    .contenidoFAQS{
+        display: flex;
+        grid-area: faqs;
+        width: 100%;
+        text-align: right;
+        margin: 0%;
+        padding: 0%;
+        padding-top: 5%;
+        padding-right: 2% ;
+        justify-content: flex-end;
+        white-space: nowrap;
+    }
+    
+    .contenidoFAQS h2{
+        font-size: 13px;
+        padding-bottom: 5%
+    }
+    
+    .contenidoFAQS p{
+        font-size: 10px;
+        padding-bottom: 10%;
+    }
+
+}
 
 
 
+
+
+/* ------------- TRANSICIONES----------------*/
 
 
 .header img{
@@ -1858,4 +2977,12 @@ button:hover{
 .navbar-nav .nav-link {
     padding-right: 10px;
     padding-left: 10px;
+}
+
+.divTienda{
+    transition: all 1000ms ease;
+}
+
+.divTienda:hover{
+    transform: scale(1.05);
 }
