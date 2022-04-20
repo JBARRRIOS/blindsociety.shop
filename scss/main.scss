@@ -1,0 +1,23 @@
+@import "variables";
+/* ------------ ESTILOS GENERALES ----------*/
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0%;
+    padding: 0px;
+    font-family: 'Archivo', sans-serif;
+    color: whitesmoke;
+    background-image: url('../assets/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@import "header";
+@import "footer";
+@import "index";
+@import "mediaqueries";

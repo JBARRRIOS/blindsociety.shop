@@ -1,0 +1,45 @@
+/* ------------ ENCABEZADO ---------- */
+.header{
+    margin: 0%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.contenedorLogo{
+    flex-wrap: nowrap;
+    width: 30%;
+}
+
+.logo{
+    display: flex;
+    margin:30px ;
+    width: 40%;
+
+}
+
+.nav{
+    ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin-top: 45px;
+    padding: 10px;
+    grid-area: nav;
+    }
+    li{
+        padding-left: 10px;
+        padding-right: 10px;
+        a{
+            display: flex;
+            text-decoration: none;
+            padding: 0 10px;
+            color: $colorFuente;
+            font-size: 20px;
+        }
+        &:hover{
+            color: $colorFondo;
+        }
+    }
+    
+}

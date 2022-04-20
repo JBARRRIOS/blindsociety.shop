@@ -1,0 +1,20 @@
+/* ----------- FOOTER ------------ */
+.divFooter{
+    margin: 0% ;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $fondoSecundario;
+    padding: 50px;
+    p{
+        font-size: 20px;
+    }
+    img{
+        width: 100%;
+    }
+    a{
+        width: 2%;
+    }
+}
