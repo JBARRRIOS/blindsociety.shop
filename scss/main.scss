@@ -8,8 +8,7 @@
 }
 
 body{
-    margin: 0%;
-    padding: 0px;
+    @extend *;
     font-family: 'Archivo', sans-serif;
     color: whitesmoke;
     background-image: url('../assets/background.png');

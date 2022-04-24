@@ -4,3 +4,16 @@ $colorFondo: #815AA8;
 
 $fondoSecundario: #333333;
 
+$contBotones: (
+    display:flex,
+    alignall: center,
+    align: flex-start,
+    justify: space-around
+);
+
+@mixin flex{
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    flex-direction: column;
+}

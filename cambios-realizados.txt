@@ -1,0 +1,37 @@
+
+En la pagina Index agregue:
+
+<meta name="description" content="Remeras personalizadas a pedido e impresion digital. Envios a todo el pais!">
+    <meta name="keywords" content="blind, society, remeras, personalizadas, impresion, digital, dgt, textil, diseño, ilustraciones, artistas, pedido">
+
+
+
+En la pagina Nosotros agregue:
+
+<meta name="keywords" content="blind, society, nosotros, impresion, digital, telas, tintas, remeras, diseño, industrial, personalizacion">
+    <meta name="description" content="Blind Society es una marca especializada en crear remeras con la mejor calidad de telas e impresion digital del mercado.">
+
+
+
+En la pagina Tienda agregue:
+
+<meta name="keywords" content="blind, society, impresion, digital, tienda, productos, remeras, artistas, diseños, comprar, personalizada, a pedido">
+    <meta name="description" content="En nuestra tienda oficial podes encontrar nuevos lanzamientos y nuestros diseños mas populares!">
+
+
+
+En la pagina Personaliza agregue:
+
+<meta name="keywords" content="blind, society, impresion, digital, contacto, pedido, remera, personalizada, personalizacion, impresion, digital">
+    <meta name="description" content="Contanos que tenes en mente!
+    Escribinos un breve mensaje con los detalles de como quisieras tu remera asi podemos pasarte un presupuesto.">
+
+
+
+En la pagina FAQS agregue:
+
+<meta name="keywords" content="blind, society, impresion, digital, faqs, preguntas, frecuentes, tiempos, entregas, envios, demoras, metodos, pago">
+    <meta name="description" content="Aca en nuestras preguntas frecuentes podes despejar todas las dudas que tengas!">
+
+
+
