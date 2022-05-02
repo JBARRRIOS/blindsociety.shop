@@ -4,6 +4,12 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    img{
+        transition: all 500ms ease;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
 }
 
 .contenedorLogo{
@@ -36,10 +42,9 @@
             padding: 0 10px;
             color: $colorFuente;
             font-size: 20px;
-        }
-        &:hover{
-            color: $colorFondo;
+            &:hover{
+                color: $colorFondo;
+            }
         }
     }
-    
 }

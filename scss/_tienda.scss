@@ -1,0 +1,77 @@
+.contenedorTienda{
+    padding: 0%;
+    .tituloTienda{
+        display: flex;
+        justify-content: flex-end;
+        margin: 5% 0px;
+        padding: 0% ;
+        h1{
+            display: flex;
+            justify-content: start;
+            background-color: #815AA8;
+            font-size: 50px;
+            padding: 1px 10% 1px 2% ;
+            align-self: flex-end;
+            align-content: center;
+        }
+    }
+    
+    .contenidoTienda{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-self: center;
+        align-self: center;
+        margin: 0%;
+        justify-content: space-around;
+        align-content: flex-start;
+        .divTienda{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            width: 33%;
+            margin-bottom: 10%;
+            transition: all 1000ms ease;
+            &:hover{
+                transform: scale(1.05);
+            }
+            img {
+                width: 100%;
+                border-radius: 10px;
+            }
+            .contenedorBotonTienda{
+                display: flex;
+                text-decoration: none;
+                width: 100%;
+                justify-content:center;
+                .botonTienda{
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    align-self: center;
+                    background-color: #333333;
+                    padding: 10px 20px;
+                    margin-top: 10%;
+                    border-radius: 20px;
+                    font-size: 15px;
+                    width: 50%;
+                    &:hover{
+                        opacity: .8;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: whitesmoke;
+                        &:hover{
+                            color: #815AA8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+

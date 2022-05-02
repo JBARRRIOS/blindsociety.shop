@@ -1,0 +1,59 @@
+.contenedorFAQS{
+    padding: 0%;
+    .tituloFAQS{
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        margin: 5% 0 0 0;
+        h1{
+            display: flex;
+            justify-content: flex-start;
+            background-color: #815AA8;
+            width: 50%;
+            font-weight: bold;
+            font-size: 40px;
+            padding: 0%;
+            padding-left: 10px;
+            align-self: flex-end;
+        }
+        h2{
+            display: flex;
+            justify-content: flex-end;
+            padding: 1% 4% 0 0 ;
+        }
+    }
+    .FAQS{
+        display: flex;
+        justify-content: space-between;
+        margin: 0%;
+        margin-bottom: 10%;
+        .imgFAQS{
+            grid-area: imagen;
+            width: 50%;
+            img{
+                width: 90%;
+                height: auto;
+                padding-left: 10%;
+            }
+        }
+        .contenidoFAQS{
+            display: flex;
+            grid-area: faqs;
+            text-align: right;
+            margin: 0%;
+            padding-top: 10%;
+            padding-right: 4% ;
+            justify-content: flex-end;
+            white-space: nowrap;
+            h2{
+                font-size: 24px;
+                padding-bottom: 5%
+            }
+            p{
+                padding-bottom: 10%;
+            }
+        }
+    }
+}

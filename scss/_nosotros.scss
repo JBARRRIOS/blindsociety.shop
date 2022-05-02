@@ -1,0 +1,158 @@
+.contenedorNosotros{
+    padding: 0%;
+}
+.contenidoNosotros{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+    height: 60%;
+    padding-top: 1%;
+    margin: 14% 0%;
+    .tituloNosotros{ 
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        padding: 0%;
+        h1{
+            background-color: #815AA8;
+            font-size: 50px;
+            font-weight: 700;
+            padding-right: 60%;
+            padding-left: 5%;
+            align-self: flex-end;
+        }
+        p{
+            margin-top: 1%;
+            font-size: 20px;
+            margin: 30px;
+            justify-content: center;
+            align-self: flex-end;
+            text-align: right;
+        }
+        .contenedorBotones{
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            width: 50%;
+            margin-top: 10%;
+            margin-right: 15%;
+            button{
+            text-align: center;
+            background-color: #333333;
+            text-decoration: none;
+            padding: 6px 50px;
+            margin-top: 3%;
+            border-radius: 20px;
+            margin-right: 40px;
+                .botonNosotros{
+                    color: whitesmoke;
+                    text-decoration: none;
+                    text-align: center;
+                    font-size: 15px;
+                    white-space: nowrap;
+                    &:hover{
+                        opacity: .8;
+                        color: #815AA8;
+                    }
+            }
+            }
+        }
+    }
+    .remerasNosotros{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        .remeraEjemplo{
+            margin-left: 10%;
+            width: 85%;
+            height: auto;
+            justify-content: center;
+        }
+    }
+}
+
+.contenidoDGT{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin: 20% 0%;
+    .sectionDGT{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        padding: 0%;
+        .impresionDigital{
+            background-color: #815AA8;
+            align-content: center;
+            justify-content: flex-start;
+            font-size: 35px;
+            margin-top: 0%;
+            padding: 5px 1% 5px 50%;
+        }
+        p{
+            font-size: 20px;
+            margin-top: 20%;
+            margin-left: 20px;
+            justify-content: center;
+            align-self: center;
+        }
+    }
+    .contImpresion{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 60%;
+        .muestraImpresion{
+            width: 80%;
+            padding-right: 10%;
+        }
+    }
+}
+
+.contenidoTelas{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin: 20% 0%;
+    .sectionTelas{
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        padding: 0%;
+        h2{
+            background-color: #815AA8;
+            font-size: 40px;
+            padding: 5px 50% 5px 3%;
+            align-self: flex-end;
+            text-align: left;
+        }
+        p{
+            font-size: 25px;
+            margin: 20% 30px 0 0 ;
+            justify-content: center;
+            align-self: flex-end;
+            text-align: right;
+        }
+    }
+    .sectionFotoTela{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        padding: 0%;
+        .tela{
+            width: 90%;
+        }
+    }
+}
+
+
